@@ -10,7 +10,11 @@ export default function App() {
         <SearchEngine />
       </header>
       <small>
-        <a href="https://github.com/Brenda-87/weather-react" target="_blank">
+        <a
+          href="https://github.com/Brenda-87/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
           Open-source code
         </a>{" "}
         | Brenda Sariowan
