@@ -10,10 +10,10 @@ export default function App() {
         <SearchEngine />
       </header>
       <small>
-        <a href="https://github.com/Brenda-87/weather-react">
+        <a href="https://github.com/Brenda-87/weather-react" target="_blank">
           Open-source code
         </a>{" "}
-        by Brenda Sariowan
+        | Brenda Sariowan
       </small>
     </div>
   );

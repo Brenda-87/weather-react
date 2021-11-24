@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
     const description = props.weather.description;
 
     return (
-      <ul>
+      <ul className="WeatherInfo">
         <li>Temperature: {Math.round(props.weather.temperature)}°C</li>
         <li>{description.charAt(0).toUpperCase() + description.slice(1)}</li>
         <li>Humidity: {props.weather.humidity}%</li>
