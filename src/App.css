@@ -2,23 +2,9 @@ body {
   background-color: #282c34;
 }
 
-.App {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.App-header {
-  border: thick double white;
-  border-radius: 8px;
-  box-shadow: 10px 5px 5px darkslategrey;
+h1 {
+  font-size: 32px;
   color: white;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(12px);
-  line-height: 1.5;
-  width: 400px;
-  height: 300px;
 }
 
 ul {
@@ -30,6 +16,11 @@ small {
   color: white;
   font-weight: bold;
   font-size: 10px;
+}
+
+.App {
+  text-align: center;
+  margin-top: 50px;
 }
 
 a:link {
