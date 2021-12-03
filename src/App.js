@@ -5,15 +5,8 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container border border-4 rounded">
-        <h1>Weather App</h1>
-        <div className="row">
-          <div className="col-5"> </div>
-
-          <div className="col-6">
-            <SearchEngine />
-          </div>
-        </div>
+      <div className="box container-md border border-secondary border-2 rounded">
+        <SearchEngine />
       </div>
       <small>
         <a
@@ -21,9 +14,9 @@ export default function App() {
           target="_blank"
           rel="noreferrer"
         >
-          Open-source code
+          OPEN-SOURCE CODE
         </a>{" "}
-        | Brenda Sariowan
+        | BRENDA SARIOWAN
       </small>
     </div>
   );

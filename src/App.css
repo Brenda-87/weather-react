@@ -1,26 +1,39 @@
 body {
-  background-color: #282c34;
+  font-family: "Genos", sans-serif;
 }
 
 h1 {
+  color: #99a799;
   font-size: 32px;
-  color: white;
+  margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 ul {
+  color: #adc2a9;
+
+  font-size: 14px;
   list-style-type: none;
   padding: 0;
 }
 
 small {
-  color: white;
-  font-weight: bold;
   font-size: 10px;
+  margin-left: 110px;
 }
 
 .App {
-  text-align: center;
-  margin-top: 50px;
+  color: #99a799;
+  display: block;
+  margin: 50px auto;
+}
+
+.box {
+  background: #fef5ed;
+  box-shadow: 8px 8px 10px 1px rgba(43, 43, 44, 0.2);
+  color: #99a799;
+  height: 300px;
+  width: 550px;
 }
 
 a:link {

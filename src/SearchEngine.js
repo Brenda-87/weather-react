@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import Temperature from "./Temperature";
+
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
@@ -30,28 +32,36 @@ export default function SearchEngine() {
   }
 
   return (
-    <div className="SearchEngine">
-      <form className="row g-2">
-        <div className="col-auto">
-          <input
-            type="search"
-            className="form-control form-control-sm"
-            placeholder="Enter city.."
-            onChange={updateCity}
-          />
+    <div className="row row-cols-2">
+      <div className="col-sm">
+        <h1>Weather App</h1>
+        <div className="row">
+          <Temperature weather={weather} />
         </div>
-        <div className="col-auto">
-          <button
-            className="btn btn-info btn-sm"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Search
-          </button>
-        </div>
-      </form>
+      </div>
+      <div className="col-sm pt-3">
+        <form className="row g-1">
+          <div className="col-9">
+            <input
+              type="search"
+              className="form-control form-control-sm"
+              placeholder="Enter city.."
+              onChange={updateCity}
+            />
+          </div>
+          <div className="col-auto">
+            <button
+              className="btn btn-outline-success btn-sm"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Search
+            </button>
+          </div>
+        </form>
 
-      <WeatherInfo weather={weather} />
+        <WeatherInfo weather={weather} />
+      </div>
     </div>
   );
 }
