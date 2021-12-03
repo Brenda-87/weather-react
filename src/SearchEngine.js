@@ -34,7 +34,7 @@ export default function SearchEngine() {
   return (
     <div className="row row-cols-2">
       <div className="col-sm">
-        <h1>Weather App</h1>
+        <h2>City name</h2>
         <div className="row">
           <Temperature weather={weather} />
         </div>

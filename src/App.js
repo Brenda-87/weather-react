@@ -8,16 +8,18 @@ export default function App() {
       <div className="box container-md border border-secondary border-2 rounded">
         <SearchEngine />
       </div>
-      <small>
-        <a
-          href="https://github.com/Brenda-87/weather-react"
-          target="_blank"
-          rel="noreferrer"
-        >
-          OPEN-SOURCE CODE
-        </a>{" "}
-        | BRENDA SARIOWAN
-      </small>
+      <div className="App-footer">
+        <small>
+          <a
+            href="https://github.com/Brenda-87/weather-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            OPEN-SOURCE CODE
+          </a>{" "}
+          | BRENDA SARIOWAN
+        </small>
+      </div>
     </div>
   );
 }
