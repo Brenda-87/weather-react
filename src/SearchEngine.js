@@ -6,7 +6,7 @@ import Temperature from "./Temperature";
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Groningen");
   const [weather, setWeather] = useState({});
 
   function displaySearch(response) {
@@ -28,40 +28,61 @@ export default function SearchEngine() {
   }
 
   function updateCity(event) {
-    setCity(event.target.value);
+    setCity(
+      event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1)
+    );
   }
 
   return (
-    <div className="row row-cols-2">
-      <div className="col-sm">
-        <h2>City name</h2>
+    <div className="SearchEngine">
+      <div className="container">
         <div className="row">
-          <Temperature weather={weather} />
+          <div className="col">
+            <h2>{city}</h2>
+          </div>
+          <div className="col mt-3">
+            <form className="row g-1">
+              <div className="col-7">
+                <input
+                  type="search"
+                  className="form-control form-control-sm"
+                  placeholder="Enter city.."
+                  onChange={updateCity}
+                />
+              </div>
+              <div className="col-3">
+                <button
+                  className="btn btn-outline-success btn-sm"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Search
+                </button>
+              </div>
+              <div className="col">
+                <button type="button" class="btn btn-success btn-sm">
+                  <i class="fas fa-map-pin"></i>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div className="col-sm pt-3">
-        <form className="row g-1">
-          <div className="col-9">
-            <input
-              type="search"
-              className="form-control form-control-sm"
-              placeholder="Enter city.."
-              onChange={updateCity}
-            />
+      {weather.temperature === undefined ? (
+        <p>loading...</p>
+      ) : (
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <Temperature weather={weather} />
+            </div>
+            <div className="col"></div>
+            <div className="col">
+              <WeatherInfo weather={weather} />
+            </div>
           </div>
-          <div className="col-auto">
-            <button
-              className="btn btn-outline-success btn-sm"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Search
-            </button>
-          </div>
-        </form>
-
-        <WeatherInfo weather={weather} />
-      </div>
+        </div>
+      )}
     </div>
   );
 }
