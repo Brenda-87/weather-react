@@ -1,3 +1,9 @@
 h2 {
   margin-top: 17px;
 }
+
+.SearchEngine p {
+  margin-left: 12px;
+  margin-top: 20px;
+  padding: 10 12 0;
+}

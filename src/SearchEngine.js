@@ -17,6 +17,7 @@ export default function SearchEngine() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       image: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -76,10 +77,7 @@ export default function SearchEngine() {
             <div className="col">
               <Temperature weather={weather} />
             </div>
-            <div className="col"></div>
-            <div className="col">
-              <WeatherInfo weather={weather} />
-            </div>
+            <WeatherInfo weather={weather} />
           </div>
         </div>
       )}
