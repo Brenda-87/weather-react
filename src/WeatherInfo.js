@@ -6,7 +6,7 @@ export default function WeatherInfo(props) {
 
   return (
     <div className="container mt-5">
-      <div className="weather-details col-7 pt-3">
+      <div className="weather-details col">
         <ul>
           <li>{description.charAt(0).toUpperCase() + description.slice(1)}</li>
           <li>Humidity: {props.weather.humidity}%</li>
