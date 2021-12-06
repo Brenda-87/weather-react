@@ -17,7 +17,7 @@ export default function SearchEngine() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      image: response.data.weather[0].icon,
+      icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
       ready: true,
     });
