@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo.js";
 import Temperature from "./Temperature.js";
 import FormattedDate from "./FormattedDate.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 import "./SearchEngine.css";
 
@@ -13,6 +14,7 @@ export default function SearchEngine() {
   function displaySearch(response) {
     console.log(response.data);
     setWeather({
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -87,6 +89,7 @@ export default function SearchEngine() {
           </div>
         </div>
       </div>
+      <WeatherForecast coordinates={weather.coordinates} />
     </div>
   );
 }
