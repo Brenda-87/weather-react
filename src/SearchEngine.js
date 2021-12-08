@@ -82,7 +82,9 @@ export default function SearchEngine() {
           <div className="col">
             <Temperature weather={weather} />
           </div>
-          <WeatherInfo weather={weather} />
+          <div className="col">
+            <WeatherInfo weather={weather} />
+          </div>
         </div>
       </div>
     </div>

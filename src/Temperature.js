@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 import "./Temperature.css";
 
@@ -8,13 +9,12 @@ export default function Temperature(props) {
 
   return (
     <div className="Temperature">
-      <div className="row g-0">
-        <div className="col-3">
+      <div className="row">
+        <div className="col-2 mb-1 pt-4 weather-icon">
           <WeatherIcon code={props.weather.icon} />
         </div>
-        <div className="col-3 mt-3">
-          <h1 className="d-inline">{Math.round(props.weather.temperature)}</h1>
-          <p className="d-inline">°C |°F</p>
+        <div className="col-5 mt-3">
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
       </div>
     </div>
