@@ -2,24 +2,9 @@ body {
   font-family: "Genos", sans-serif;
 }
 
-h1 {
-  color: #99a799;
-  font-size: 32px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-}
-
-ul {
-  color: #99a799;
-
-  font-size: 14px;
-  list-style-type: none;
-  padding: 0;
-}
-
 small {
-  font-size: 11px;
-  margin-left: 30px;
+  font-size: 15px;
+  margin-left: 20px;
 }
 
 .App {
@@ -30,15 +15,15 @@ small {
 .App-footer {
   display: block;
   margin: 0 auto;
-  width: 400px;
+  width: 480px;
 }
 
 .box {
   background: #fef5ed;
   box-shadow: 8px 8px 10px 1px rgba(43, 43, 44, 0.2);
   color: #99a799;
-  height: 300px;
-  width: 550px;
+  height: 550px;
+  width: 800px;
 }
 
 a:link {
@@ -47,7 +32,7 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: lightskyblue;
+  color: rgb(25, 159, 241);
 }
 
 a:hover {

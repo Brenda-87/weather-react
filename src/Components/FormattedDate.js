@@ -20,5 +20,9 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return (
+    <div className="FormattedDate">
+      {day} {hours}:{minutes}
+    </div>
+  );
 }

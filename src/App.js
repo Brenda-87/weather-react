@@ -1,5 +1,5 @@
 import React from "react";
-import SearchEngine from "./SearchEngine";
+import SearchEngine from "./Components/SearchEngine";
 import "./App.css";
 
 export default function App() {

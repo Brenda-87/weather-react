@@ -5,7 +5,7 @@ import Temperature from "./Temperature.js";
 import FormattedDate from "./FormattedDate.js";
 import WeatherForecast from "./WeatherForecast.js";
 
-import "./SearchEngine.css";
+import "./styling.css";
 
 export default function SearchEngine() {
   const [city, setCity] = useState("Groningen");
@@ -47,23 +47,23 @@ export default function SearchEngine() {
     <div className="SearchEngine">
       <div className="container">
         <div className="row">
-          <div className="col">
-            <h2>{city}</h2>
-            <FormattedDate date={weather.date} />
+          <div className="col-4">
+            <h1>{city}</h1>
+            <strong>Last updated:</strong> <FormattedDate date={weather.date} />
           </div>
           <div className="col mt-3">
-            <form className="row g-1">
+            <form className="row g-2">
               <div className="col-7">
                 <input
                   type="search"
-                  className="form-control form-control-sm"
+                  className="form-control form-control-lg"
                   placeholder="Enter city.."
                   onChange={updateCity}
                 />
               </div>
-              <div className="col-3">
+              <div className="col">
                 <button
-                  className="btn btn-outline-success btn-sm"
+                  className="btn btn-outline-success btn-lg"
                   type="submit"
                   onClick={handleSubmit}
                 >
@@ -71,7 +71,7 @@ export default function SearchEngine() {
                 </button>
               </div>
               <div className="col">
-                <button type="button" className="btn btn-success btn-sm">
+                <button type="button" className="btn btn-success btn-lg">
                   <i className="fas fa-map-pin"></i>
                 </button>
               </div>
