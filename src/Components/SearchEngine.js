@@ -10,9 +10,9 @@ import "./styling.css";
 export default function SearchEngine() {
   const [city, setCity] = useState("Groningen");
   const [weather, setWeather] = useState({ ready: false });
+  const apiKey = "ce86e6981d691b922a146baa93501d42";
 
   function displaySearch(response) {
-    console.log(response.data);
     setWeather({
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
@@ -27,7 +27,6 @@ export default function SearchEngine() {
 
   function handleSubmit(event) {
     event?.preventDefault();
-    let apiKey = "ce86e6981d691b922a146baa93501d42";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(displaySearch);
   }
@@ -36,6 +35,14 @@ export default function SearchEngine() {
     setCity(
       event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1)
     );
+  }
+
+  function showPosition(position) {
+    console.log(position);
+  }
+
+  function handleCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
 
   if (weather.ready === false) {
@@ -71,7 +78,11 @@ export default function SearchEngine() {
                 </button>
               </div>
               <div className="col">
-                <button type="button" className="btn btn-success btn-lg">
+                <button
+                  type="button"
+                  className="btn btn-success btn-lg"
+                  onClick={handleCurrentLocation}
+                >
                   <i className="fas fa-map-pin"></i>
                 </button>
               </div>
