@@ -37,12 +37,12 @@ export default function SearchEngine() {
     );
   }
 
-  function showPosition(position) {
+  function searchByLocation(position) {
     console.log(position);
   }
 
   function handleCurrentLocation() {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(searchByLocation);
   }
 
   if (weather.ready === false) {
