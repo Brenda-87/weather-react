@@ -5,7 +5,7 @@ import Temperature from "./Temperature.js";
 import FormattedDate from "./FormattedDate.js";
 import WeatherForecast from "./WeatherForecast.js";
 
-import "./styling.css";
+import "./SearchEngine.css";
 
 export default function SearchEngine() {
   const [city, setCity] = useState("Groningen");
@@ -56,7 +56,8 @@ export default function SearchEngine() {
         <div className="row">
           <div className="col-4">
             <h1>{city}</h1>
-            <strong>Last updated:</strong> <FormattedDate date={weather.date} />
+            <span id="updated-date">Last updated:</span>{" "}
+            <FormattedDate date={weather.date} />
           </div>
           <div className="col mt-3">
             <form className="row g-2">

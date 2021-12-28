@@ -2,6 +2,8 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
+import "./Temperature.css";
+
 export default function Temperature(props) {
   return (
     <div className="Temperature">

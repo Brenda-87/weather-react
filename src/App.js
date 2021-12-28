@@ -10,16 +10,15 @@ export default function App() {
       </div>
       <div className="App-footer">
         <small>
-          Coded by Brenda Sariowan |
+          Coded by Brenda Sariowan | Open-sourced on{" "}
           <a
             href="https://github.com/Brenda-87/weather-react"
             target="_blank"
             rel="noreferrer"
           >
-            {" "}
-            Open-sourced
+            GitHub
           </a>{" "}
-          on GitHub and hosted on{" "}
+          and hosted on
           <a
             href="https://suspicious-hamilton-4a1093.netlify.app"
             target="_blank"

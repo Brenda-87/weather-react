@@ -1,0 +1,16 @@
+.SearchEngine h1 {
+  color: #99a799;
+  font-size: 40px;
+  margin-top: 15px;
+}
+
+.SearchEngine p {
+  margin-left: 12px;
+  margin-top: 20px;
+  padding: 10 12 0;
+}
+
+.SearchEngine #updated-date {
+  font-weight: bold;
+  font-size: 16px;
+}
