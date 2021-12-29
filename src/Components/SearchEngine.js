@@ -13,6 +13,7 @@ export default function SearchEngine() {
   const apiKey = "ce86e6981d691b922a146baa93501d42";
 
   function displaySearch(response) {
+    console.log(response);
     setWeather({
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
@@ -23,7 +24,6 @@ export default function SearchEngine() {
       date: new Date(response.data.dt * 1000),
       ready: true,
     });
-    console.log(weather);
   }
 
   function handleSubmit(event) {
@@ -38,12 +38,26 @@ export default function SearchEngine() {
     );
   }
 
-  function searchByLocation(position) {
-    //hier gebleven
-    console.log(position);
+  function updateCurrentLocationInformation(city) {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(displaySearch);
   }
 
-  function handleCurrentLocation() {
+  function displayLocation(response) {
+    setCity(response.data[0].name);
+    updateCurrentLocationInformation(response.data[0].name);
+  }
+
+  function searchByLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    const apiKey = "ce86e6981d691b922a146baa93501d42";
+    let url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    axios.get(url).then(displayLocation);
+  }
+
+  function handleCurrentLocation(event) {
+    event?.preventDefault();
     navigator.geolocation.getCurrentPosition(searchByLocation);
   }
 
@@ -83,7 +97,7 @@ export default function SearchEngine() {
               <div className="col">
                 <button
                   type="button"
-                  className="btn btn-success btn-lg"
+                  className="btn btn-success btn-lg current-location"
                   onClick={handleCurrentLocation}
                 >
                   <i className="fas fa-map-pin"></i>
