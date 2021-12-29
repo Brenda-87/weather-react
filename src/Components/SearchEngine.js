@@ -52,7 +52,7 @@ export default function SearchEngine() {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     const apiKey = "ce86e6981d691b922a146baa93501d42";
-    let url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
     axios.get(url).then(displayLocation);
   }
 
