@@ -23,6 +23,7 @@ export default function SearchEngine() {
       date: new Date(response.data.dt * 1000),
       ready: true,
     });
+    console.log(weather);
   }
 
   function handleSubmit(event) {
@@ -38,6 +39,7 @@ export default function SearchEngine() {
   }
 
   function searchByLocation(position) {
+    //hier gebleven
     console.log(position);
   }
 

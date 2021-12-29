@@ -3,8 +3,7 @@ body {
 }
 
 small {
-  font-size: 15px;
-  margin-left: 20px;
+  font-size: 20px;
 }
 
 .App {
@@ -15,14 +14,14 @@ small {
 .App-footer {
   display: block;
   margin: 0 auto;
-  width: 480px;
+  width: 600px;
 }
 
 .box {
   background: #fef5ed;
   box-shadow: 8px 8px 10px 1px rgba(43, 43, 44, 0.2);
   color: #99a799;
-  height: 550px;
+  height: 600px;
   width: 800px;
 }
 

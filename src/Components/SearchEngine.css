@@ -1,7 +1,7 @@
 .SearchEngine h1 {
   color: #99a799;
-  font-size: 40px;
-  margin-top: 15px;
+  font-size: 50px;
+  margin-top: 8px;
 }
 
 .SearchEngine p {
@@ -12,5 +12,5 @@
 
 .SearchEngine #updated-date {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 25px;
 }
